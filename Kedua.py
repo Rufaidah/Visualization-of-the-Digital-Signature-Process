@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'Kedua.ui'
 #
-# Created: Sun Dec  9 22:28:07 2018
+# Created: Mon Dec 17 12:06:19 2018
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -560,13 +560,6 @@ class Ui_MainWindow2(object):
         self.box_nilaiL.setObjectName(_fromUtf8("box_nilaiL"))
         self.box_nilaiL.addItem(_fromUtf8(""))
         self.box_nilaiL.addItem(_fromUtf8(""))
-        self.box_nilaiL.addItem(_fromUtf8(""))
-        self.box_nilaiL.addItem(_fromUtf8(""))
-        self.box_nilaiL.addItem(_fromUtf8(""))
-        self.box_nilaiL.addItem(_fromUtf8(""))
-        self.box_nilaiL.addItem(_fromUtf8(""))
-        self.box_nilaiL.addItem(_fromUtf8(""))
-        self.box_nilaiL.addItem(_fromUtf8(""))
         self.verticalLayout_2.addWidget(self.box_nilaiL)
         self.horizontalLayout_2 = QtGui.QHBoxLayout()
         self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
@@ -640,20 +633,14 @@ class Ui_MainWindow2(object):
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">=== L === </span></p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Input untuk mencari bilangan prima</p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Komputasi:<span style=\" font-weight:600;\"> </span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">512 &lt;= L &lt;= 1024 | L = Kelipatan 64 </span></p></body></html>", None))
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">512 &lt;= L &lt;= 1024 | L = Kelipatan 64 </span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">*Pada kasus ini diubah menjadi</p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">32 &lt;= L &lt;= 64 | L = Kelipatan 2</span></p></body></html>", None))
         self.output.setText(_translate("MainWindow", "OUTPUT", None))
         self.label_judul.setText(_translate("MainWindow", "Mencari Bilangan Prima", None))
         self.label_5.setText(_translate("MainWindow", "Pilih nilai L", None))
-        self.box_nilaiL.setItemText(0, _translate("MainWindow", "512", None))
-        self.box_nilaiL.setItemText(1, _translate("MainWindow", "576", None))
-        self.box_nilaiL.setItemText(2, _translate("MainWindow", "640", None))
-        self.box_nilaiL.setItemText(3, _translate("MainWindow", "704", None))
-        self.box_nilaiL.setItemText(4, _translate("MainWindow", "768", None))
-        self.box_nilaiL.setItemText(5, _translate("MainWindow", "832", None))
-        self.box_nilaiL.setItemText(6, _translate("MainWindow", "896", None))
-        self.box_nilaiL.setItemText(7, _translate("MainWindow", "960", None))
-        self.box_nilaiL.setItemText(8, _translate("MainWindow", "1024", None))
+        self.box_nilaiL.setItemText(0, _translate("MainWindow", "32", None))
+        self.box_nilaiL.setItemText(1, _translate("MainWindow", "64", None))
         self.btn_ok.setText(_translate("MainWindow", "OK", None))
-
 
 

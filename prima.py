@@ -1,11 +1,11 @@
 import math
 
 def prima():
-    # 2**63 sampai 2**64 9223372036854775837
+    # 2**63 sampai 2**64 9223372036854775837 (5 menit 30 detik)
     # 2**31 sampai 2**32 2147483659
 
-    lower = 2**31
-    upper = 2**32
+    lower = 2**63
+    upper = 2**64
 
     for num in range(lower, upper + 1):
         if num % 2 == 0:

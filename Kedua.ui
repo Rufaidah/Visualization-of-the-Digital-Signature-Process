@@ -1009,7 +1009,9 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;=== L === &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Input untuk mencari bilangan prima&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Komputasi:&lt;span style=&quot; font-weight:600;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;512 &amp;lt;= L &amp;lt;= 1024 | L = Kelipatan 64 &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;512 &amp;lt;= L &amp;lt;= 1024 | L = Kelipatan 64 &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;*Pada kasus ini diubah menjadi&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;32 &amp;lt;= L &amp;lt;= 64 | L = Kelipatan 2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     </property>
                    </widget>
                   </item>
@@ -1116,47 +1118,12 @@ color: rgb(255, 255, 255);</string>
                  <widget class="QComboBox" name="box_nilaiL">
                   <item>
                    <property name="text">
-                    <string>512</string>
+                    <string>32</string>
                    </property>
                   </item>
                   <item>
                    <property name="text">
-                    <string>576</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>640</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>704</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>768</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>832</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>896</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>960</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>1024</string>
+                    <string>64</string>
                    </property>
                   </item>
                  </widget>

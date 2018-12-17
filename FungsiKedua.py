@@ -45,13 +45,11 @@ class MyQtApp(Kedua.Ui_MainWindow2, QtGui.QMainWindow):
         label_nilai.setText("H(M)")
 
     def select_L(self):
-        # combo = self.box_nilaiL
-        # l = int(combo.currentText())
-        #
-        # lower = 2**(l-1)
-        # upper = 2**(l)
-        lower = 2**31
-        upper = 2**32
+        combo = self.box_nilaiL
+        l = int(combo.currentText())
+
+        lower = 2**(l-1)
+        upper = 2**(l)
 
         result = ''
 
@@ -69,18 +67,17 @@ class MyQtApp(Kedua.Ui_MainWindow2, QtGui.QMainWindow):
                     result = str(num)
                     break
 
-        # self.nilai_output.setText("L = " + str(l) + "\np = " + result)
-        self.nilai_output.setText("L = " + "\np = " + result)
+        self.nilai_output.setText("L = " + str(l) + "\np = " + result)
 
         label_nilaiprima = self.label_nilaip
         label_nilaiprima.setText(result)
 
         label_nilaiL = self.label_nilaiL
         
-        # label_nilaiL.setText("L = " + str(l))
+        label_nilaiL.setText("L = " + str(l))
         
-        print(lower)
-        print(upper)
+        # print(lower)
+        # print(upper)
 
         return result
         
