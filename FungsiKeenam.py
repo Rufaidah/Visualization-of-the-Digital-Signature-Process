@@ -58,25 +58,25 @@ class MyQtApp(Keenam.Ui_MainWindow6, QtGui.QMainWindow):
         label_nilai.setText("H(M)")
 
         label_nilaiprima = self.label_nilaip
-        label_nilaiprima.setText(open('output/nilaip.txt', 'r').read())
+        label_nilaiprima.setText("p = " +open('output/nilaip.txt', 'r').read()[0:3]+"..")
 
         label_L = self.label_nilaiL
         label_L.setText(open('output/nilaiL.txt', 'r').read())
 
         label_nilaipembagi = self.label_nilaiq
-        label_nilaipembagi.setText(open('output/nilaipembagiutama.txt', 'r').read())
+        label_nilaipembagi.setText("q = " +open('output/nilaipembagiutama.txt', 'r').read()[0:3]+"..")
 
         label_x = self.label_nilaix
-        label_x.setText(open('output/nilaix.txt', 'r').read())
+        label_x.setText("x = " +open('output/nilaix.txt', 'r').read()[0:3]+"..")
 
         label_k = self.label_nilaik
-        label_k.setText(open('output/nilaik.txt', 'r').read())
+        label_k.setText("k = " +open('output/nilaik.txt', 'r').read()[0:3]+"..")
 
         label_h = self.label_nilaih
-        label_h.setText("h = " + open('output/nilaik.txt', 'r').read())
+        label_h.setText("h = " + open('output/nilaih.txt', 'r').read()[0:3]+"..")
 
         label_g = self.label_nilaig
-        label_g.setText(open('output/nilaig.txt', 'r').read())
+        label_g.setText("g = "+open('output/nilaig.txt', 'r').read())
 
     def select_nilair(self):
         nilaik = int(open('output/nilaik.txt', 'r').read())
@@ -90,7 +90,7 @@ class MyQtApp(Keenam.Ui_MainWindow6, QtGui.QMainWindow):
         self.nilai_output.setText(output)
 
         lebel_r = self.label_nilair
-        lebel_r.setText(str(r))
+        lebel_r.setText("r = " +str(r))
         file = open('output/nilair.txt', 'w')
         file.write(str(r))
         file.close()

@@ -50,13 +50,13 @@ class MyQtApp(Keempat.Ui_MainWindow4, QtGui.QMainWindow):
         label_nilai.setText("H(M)")
 
         label_nilaiprima = self.label_nilaip
-        label_nilaiprima.setText(open('output/nilaip.txt', 'r').read())
+        label_nilaiprima.setText("p = " +open('output/nilaip.txt', 'r').read()[0:3]+"..")
 
         label_L = self.label_nilaiL
         label_L.setText(open('output/nilaiL.txt', 'r').read())
 
         label_nilaipembagi = self.label_nilaiq
-        label_nilaipembagi.setText(open('output/nilaipembagiutama.txt', 'r').read())
+        label_nilaipembagi.setText("q = " +open('output/nilaipembagiutama.txt', 'r').read()[0:3]+"..")
 
     def select_nilaixk(self):
         lower = 0
@@ -69,13 +69,13 @@ class MyQtApp(Keempat.Ui_MainWindow4, QtGui.QMainWindow):
         self.nilai_output.setText(output)
 
         label_x = self.label_nilaix
-        label_x.setText(str(x))
+        label_x.setText("x = " +str(x)[0:3]+"..")
         file = open('output/nilaix.txt', 'w')
         file.write(str(x))
         file.close()
 
         label_k = self.label_nilaik
-        label_k.setText(str(k))
+        label_k.setText("k = " +str(k)[0:3]+"..")
         file2 = open('output/nilaik.txt', 'w')
         file2.write(str(k))
         file.close()

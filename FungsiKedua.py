@@ -70,7 +70,7 @@ class MyQtApp(Kedua.Ui_MainWindow2, QtGui.QMainWindow):
         self.nilai_output.setText("L = " + str(l) + "\np = " + result)
 
         label_nilaiprima = self.label_nilaip
-        label_nilaiprima.setText(result)
+        label_nilaiprima.setText("p = " + str(p)[0:3]+"..")
 
         label_nilaiL = self.label_nilaiL
         

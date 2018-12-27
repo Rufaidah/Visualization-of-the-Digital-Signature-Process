@@ -56,19 +56,19 @@ class MyQtApp(Kelima.Ui_MainWindow5, QtGui.QMainWindow):
         label_nilai.setText("H(M)")
 
         label_nilaiprima = self.label_nilaip
-        label_nilaiprima.setText(open('output/nilaip.txt', 'r').read())
+        label_nilaiprima.setText("p = " +open('output/nilaip.txt', 'r').read()[0:3]+"..")
 
         label_L = self.label_nilaiL
         label_L.setText(open('output/nilaiL.txt', 'r').read())
 
         label_nilaipembagi = self.label_nilaiq
-        label_nilaipembagi.setText(open('output/nilaipembagiutama.txt', 'r').read())
+        label_nilaipembagi.setText("q = " +open('output/nilaipembagiutama.txt', 'r').read()[0:3]+"..")
 
         label_x = self.label_nilaix
-        label_x.setText(open('output/nilaix.txt', 'r').read())
+        label_x.setText("x = " +open('output/nilaix.txt', 'r').read()[0:3]+"..")
 
         label_k = self.label_nilaik
-        label_k.setText(open('output/nilaik.txt', 'r').read())
+        label_k.setText("k = " +open('output/nilaik.txt', 'r').read()[0:3]+"..")
 
     def select_nilaig(self):
         nilaip = int(open('output/nilaip.txt', 'r').read())
@@ -79,20 +79,20 @@ class MyQtApp(Kelima.Ui_MainWindow5, QtGui.QMainWindow):
 
         h = random.randint(lower, upper)
 
-        g = h**((nilaip-1)/nilaiq)%nilaip
+        g = (h**((nilaip-1)/nilaiq))%nilaip
         # g > 1 belom dimasukin
 
         output = "Nilai h = " + str(h) + "\n\nNilai g = " + str(g)
         self.nilai_output.setText(output)
 
         lebel_h = self.label_nilaih
-        lebel_h.setText("h = " + str(h))
+        lebel_h.setText("h = " + str(h)[0:3]+"..")
         file = open('output/nilaih.txt', 'w')
         file.write(str(h))
         file.close()
 
         lebel_g = self.label_nilaig
-        lebel_g.setText(str(g))
+        lebel_g.setText("g = " +str(g))
         file2 = open('output/nilaig.txt', 'w')
         file2.write(str(g))
         file2.close()

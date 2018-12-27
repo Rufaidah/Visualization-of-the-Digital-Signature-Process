@@ -49,7 +49,7 @@ class MyQtApp(Ketiga.Ui_MainWindow3, QtGui.QMainWindow):
         label_L.setText(open('output/nilaiL.txt', 'r').read())
 
         label_nilaiprima = self.label_nilaip
-        label_nilaiprima.setText(open('output/nilaip.txt', 'r').read())
+        label_nilaiprima.setText("p = " +open('output/nilaip.txt', 'r').read()[0:3]+"..")
 
     def select_pembagi(self):
         lower = 2**159
@@ -61,7 +61,7 @@ class MyQtApp(Ketiga.Ui_MainWindow3, QtGui.QMainWindow):
         self.nilai_output.setText(output)
 
         label_nilaipembagi = self.label_nilaiq
-        label_nilaipembagi.setText(str(q))
+        label_nilaipembagi.setText("q = " +str(q)[0:3]+"..")
         file = open('output/nilaipembagiutama.txt', 'w')
         file.write(str(q))
         file.close()
