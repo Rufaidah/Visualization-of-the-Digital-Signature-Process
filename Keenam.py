@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'Keenam.ui'
 #
-# Created: Tue Dec 11 15:09:22 2018
+# Created: Wed Jan 16 19:46:21 2019
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -65,7 +65,7 @@ class Ui_MainWindow6(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName(_fromUtf8("scrollArea"))
         self.scrollAreaWidgetContents = QtGui.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 456, 811))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 481, 811))
         self.scrollAreaWidgetContents.setObjectName(_fromUtf8("scrollAreaWidgetContents"))
         self.gridLayout_5 = QtGui.QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_5.setObjectName(_fromUtf8("gridLayout_5"))
@@ -1225,16 +1225,32 @@ class Ui_MainWindow6(object):
         self.label_judul.setMargin(10)
         self.label_judul.setObjectName(_fromUtf8("label_judul"))
         self.verticalLayout_7.addWidget(self.label_judul)
-        self.verticalLayout_6 = QtGui.QVBoxLayout()
-        self.verticalLayout_6.setContentsMargins(-1, 15, -1, -1)
-        self.verticalLayout_6.setObjectName(_fromUtf8("verticalLayout_6"))
-        self.label_5 = QtGui.QLabel(self.frame_input)
+        self.verticalLayout_8 = QtGui.QVBoxLayout()
+        self.verticalLayout_8.setContentsMargins(0, 15, 0, -1)
+        self.verticalLayout_8.setObjectName(_fromUtf8("verticalLayout_8"))
+        self.label_22 = QtGui.QLabel(self.frame_input)
         font = QtGui.QFont()
-        font.setPointSize(12)
-        self.label_5.setFont(font)
-        self.label_5.setObjectName(_fromUtf8("label_5"))
-        self.verticalLayout_6.addWidget(self.label_5)
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_22.setFont(font)
+        self.label_22.setObjectName(_fromUtf8("label_22"))
+        self.verticalLayout_8.addWidget(self.label_22)
+        self.label_24 = QtGui.QLabel(self.frame_input)
+        self.label_24.setObjectName(_fromUtf8("label_24"))
+        self.verticalLayout_8.addWidget(self.label_24)
+        self.label = QtGui.QLabel(self.frame_input)
+        self.label.setObjectName(_fromUtf8("label"))
+        self.verticalLayout_8.addWidget(self.label)
+        self.label_23 = QtGui.QLabel(self.frame_input)
+        self.label_23.setObjectName(_fromUtf8("label_23"))
+        self.verticalLayout_8.addWidget(self.label_23)
+        self.label_25 = QtGui.QLabel(self.frame_input)
+        self.label_25.setObjectName(_fromUtf8("label_25"))
+        self.verticalLayout_8.addWidget(self.label_25)
+        self.verticalLayout_7.addLayout(self.verticalLayout_8)
         self.horizontalLayout_2 = QtGui.QHBoxLayout()
+        self.horizontalLayout_2.setContentsMargins(-1, 15, -1, -1)
         self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
         spacerItem1 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem1)
@@ -1247,8 +1263,7 @@ class Ui_MainWindow6(object):
         self.btn_ok.setMinimumSize(QtCore.QSize(0, 0))
         self.btn_ok.setObjectName(_fromUtf8("btn_ok"))
         self.horizontalLayout_2.addWidget(self.btn_ok)
-        self.verticalLayout_6.addLayout(self.horizontalLayout_2)
-        self.verticalLayout_7.addLayout(self.verticalLayout_6)
+        self.verticalLayout_7.addLayout(self.horizontalLayout_2)
         spacerItem2 = QtGui.QSpacerItem(20, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
         self.verticalLayout_7.addItem(spacerItem2)
         self.horizontalLayout_4 = QtGui.QHBoxLayout()
@@ -1311,14 +1326,18 @@ class Ui_MainWindow6(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Ubuntu\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">=== Global Public-Key (r) === </span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Kunci yang dapat digunakan oleh siapa saja yang ingin memeriksa <span style=\" font-style:italic;\">digital signature</span> yang bersangkutan pada suatu dokumen.</p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">=== Nilai r === </span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Salah satu output dari proses signing.</p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Komputasi: </p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">r = (g^k mod p) mod q</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
         self.output.setText(_translate("MainWindow", "OUTPUT", None))
-        self.label_judul.setText(_translate("MainWindow", "Mencari Nilai Global Public-Key", None))
-        self.label_5.setText(_translate("MainWindow", "Cari nilai r", None))
+        self.label_judul.setText(_translate("MainWindow", "Mencari Nilai r", None))
+        self.label_22.setText(_translate("MainWindow", "Yang Dibutuhkan:", None))
+        self.label_24.setText(_translate("MainWindow", "<html><head/><body><ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Nilai k</li></ul></body></html>", None))
+        self.label.setText(_translate("MainWindow", "<html><head/><body><ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Nilai p</li></ul></body></html>", None))
+        self.label_23.setText(_translate("MainWindow", "<html><head/><body><ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Nilai q</li></ul></body></html>", None))
+        self.label_25.setText(_translate("MainWindow", "<html><head/><body><ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Nilai g</li></ul></body></html>", None))
         self.btn_ok.setText(_translate("MainWindow", "OK", None))
 
 

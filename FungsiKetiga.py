@@ -5,6 +5,8 @@ from ui import Ketiga, FungsiKeempat
 from PyQt4 import QtGui, QtCore
 from PyQt4.QtGui import QPixmap
 
+import sympy
+import math
 import random
 
 class MyQtApp(Ketiga.Ui_MainWindow3, QtGui.QMainWindow):
@@ -46,27 +48,32 @@ class MyQtApp(Ketiga.Ui_MainWindow3, QtGui.QMainWindow):
         label_nilai.setText("H(M)")
 
         label_L = self.label_nilaiL
-        label_L.setText(open('output/nilaiL.txt', 'r').read())
+        label_L.setText("L = " + open('output/nilaiL.txt', 'r').read())
 
         label_nilaiprima = self.label_nilaip
         label_nilaiprima.setText("p = " +open('output/nilaip.txt', 'r').read()[0:3]+"..")
 
     def select_pembagi(self):
-        lower = 2**159
-        upper = 2**160
+        q = int(open('output/nilaip.txt', 'r').read()) - 1
+        upper = int(q/100)
+        # upper = int(math.sqrt(q))
 
-        q = random.randint(lower, upper)
+        result = ''
 
-        output = "Pembagi utama = " + str(q)
-        self.nilai_output.setText(output)
+        for num in range(2, upper):
+            if (q % num == 0):
+                if (sympy.isprime(num)):
+                    result = str(num)
+
+        self.nilai_output.setText("Pembagi utama = " + result)
 
         label_nilaipembagi = self.label_nilaiq
-        label_nilaipembagi.setText("q = " +str(q)[0:3]+"..")
+        label_nilaipembagi.setText("q = " +str(result)[0:3]+"..")
         file = open('output/nilaipembagiutama.txt', 'w')
-        file.write(str(q))
+        file.write(str(result))
         file.close()
 
-        return q
+        return result
 
     def next(self):
         self.hide()

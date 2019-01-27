@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'Keempat.ui'
 #
-# Created: Sun Dec  9 22:33:06 2018
+# Created: Wed Jan 16 19:48:45 2019
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -583,6 +583,14 @@ class Ui_MainWindow4(object):
         self.verticalLayout_6 = QtGui.QVBoxLayout()
         self.verticalLayout_6.setContentsMargins(-1, 15, -1, -1)
         self.verticalLayout_6.setObjectName(_fromUtf8("verticalLayout_6"))
+        self.label_15 = QtGui.QLabel(self.frame_input)
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_15.setFont(font)
+        self.label_15.setObjectName(_fromUtf8("label_15"))
+        self.verticalLayout_6.addWidget(self.label_15)
         self.label_5 = QtGui.QLabel(self.frame_input)
         font = QtGui.QFont()
         font.setPointSize(12)
@@ -654,18 +662,18 @@ class Ui_MainWindow4(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Ubuntu\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">=== x === </span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Random atau pseudorandom integer.</p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Salah satu input untuk membuat global public-key dan private key,</p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">=== Private key (x) === </span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Kunci yang disimpan oleh pemiliknya dan digunakan untuk membuat tanda tangan digital.</p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Salah satu input untuk mendapatkan nilai s.</p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Komputasi: </p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">0 &lt; x &lt; q</span></p>\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">=== k === </span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Random atau pseudorandom integer.</p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Salah satu input untuk membuat private key.</p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">=== Nilai Rahasia Dokumen (k) === </span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Salah satu input untuk mendapatkan nilai r dan s.</p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Komputasi: </p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">0 &lt; k &lt; q</span></p></body></html>", None))
         self.output.setText(_translate("MainWindow", "OUTPUT", None))
         self.label_judul.setText(_translate("MainWindow", "Mencari Random atau Pseudorandom Integer", None))
+        self.label_15.setText(_translate("MainWindow", "Proses:", None))
         self.label_5.setText(_translate("MainWindow", "Random nilai x dan k", None))
         self.btn_ok.setText(_translate("MainWindow", "OK", None))
 

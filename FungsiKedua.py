@@ -5,6 +5,7 @@ from ui import Kedua, FungsiKetiga
 from PyQt4 import QtGui, QtCore
 from PyQt4.QtGui import QPixmap
 
+import sympy
 import math
 import random
 
@@ -48,55 +49,34 @@ class MyQtApp(Kedua.Ui_MainWindow2, QtGui.QMainWindow):
         combo = self.box_nilaiL
         l = int(combo.currentText())
 
-        lower = 2**(l-1)
-        upper = 2**(l)
+        lower = (2**(l-1)) + 1
+        upper = (2**(l)) - 1
 
-        result = ''
+        num = sympy.randprime(lower, upper)
 
-        for num in range(lower, upper + 1):
-            if num % 2 == 0:
-                pass
-            else:
-                prime = True
-                pmax = int(math.sqrt(num))
-                for p in range(3, pmax + 1, 2):
-                    if (num % p) == 0:
-                        prime = False
-                        break
-                if prime:
-                    result = str(num)
-                    break
-
-        self.nilai_output.setText("L = " + str(l) + "\np = " + result)
-
-        label_nilaiprima = self.label_nilaip
-        label_nilaiprima.setText("p = " + str(p)[0:3]+"..")
+        self.nilai_output.setText("L = " + str(l) + "\np = " + str(num))
 
         label_nilaiL = self.label_nilaiL
-        
         label_nilaiL.setText("L = " + str(l))
-        
+        file = open('output/nilaiL.txt', 'w')
+        file.write(str(l))
+        file.close()
+
+        label_nilaiprima = self.label_nilaip
+        label_nilaiprima.setText("p = " + str(num)[0:3]+"..")
+        file2 = open('output/nilaip.txt', 'w')
+        file2.write(str(num))
+        file2.close()
+
         # print(lower)
         # print(upper)
 
-        return result
+        return num
         
 
     def next(self):
-        prima = self.select_L()
-        if not prima:
-            QtGui.QMessageBox.about(self, "Prima Required", "Prima tidak boleh kosong! Pilih nilai L yang lain")
-            return
 
-        file = open('output/nilaiL.txt', 'w')
-        nilaiL = self.label_nilaiL.text()
-        file.write(nilaiL)
-        file.close()
 
-        file2 = open('output/nilaip.txt', 'w')
-        p = str(self.select_L())
-        file2.write(p)
-        file2.close()
 
         self.hide()
         ketiga = FungsiKetiga.MyQtApp(self)

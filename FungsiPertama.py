@@ -10,6 +10,8 @@ from PyQt4.QtGui import QPixmap
 from Crypto.PublicKey import RSA
 from Crypto import Random
 
+import rsa
+
 import hashlib
 
 class MyQtApp(Pertama.Ui_MainWindow, QtGui.QMainWindow):
@@ -143,6 +145,11 @@ class MyQtApp(Pertama.Ui_MainWindow, QtGui.QMainWindow):
 
         self.select_hash()
 
+        file = open('output/dokumen.txt', 'w')
+        dokumen = ntpath.basename(self.edit_file.text())
+        file.write(dokumen)
+        file.close()
+
         file = open('output/fungsihash.txt', 'w')
         hash = self.label_hash.text()
         file.write(hash)
@@ -157,8 +164,6 @@ class MyQtApp(Pertama.Ui_MainWindow, QtGui.QMainWindow):
         kedua = FungsiKedua.MyQtApp(self)
         kedua.position()
         kedua.show()
-
-
 
 if __name__ == "__main__":
     import sys

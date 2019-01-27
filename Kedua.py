@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'Kedua.ui'
 #
-# Created: Mon Dec 17 12:06:19 2018
+# Created: Wed Jan 16 19:23:58 2019
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -550,6 +550,14 @@ class Ui_MainWindow2(object):
         self.verticalLayout_2 = QtGui.QVBoxLayout()
         self.verticalLayout_2.setContentsMargins(-1, 15, -1, -1)
         self.verticalLayout_2.setObjectName(_fromUtf8("verticalLayout_2"))
+        self.label_15 = QtGui.QLabel(self.frame_input)
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_15.setFont(font)
+        self.label_15.setObjectName(_fromUtf8("label_15"))
+        self.verticalLayout_2.addWidget(self.label_15)
         self.label_5 = QtGui.QLabel(self.frame_input)
         font = QtGui.QFont()
         font.setPointSize(12)
@@ -627,7 +635,7 @@ class Ui_MainWindow2(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Ubuntu\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">=== Bilangan Prima (p) === </span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Salah satu input untuk membuat global public-key</p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Salah satu komponen dari global public-key dan sebagai salah satu inputan untuk mendapatkan nilai r.</p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Komputasi:<span style=\" font-weight:600;\">  </span></p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">2^(L-1) &lt; P &lt; 2^L </span></p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">=== L === </span></p>\n"
@@ -638,9 +646,11 @@ class Ui_MainWindow2(object):
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">32 &lt;= L &lt;= 64 | L = Kelipatan 2</span></p></body></html>", None))
         self.output.setText(_translate("MainWindow", "OUTPUT", None))
         self.label_judul.setText(_translate("MainWindow", "Mencari Bilangan Prima", None))
+        self.label_15.setText(_translate("MainWindow", "Proses:", None))
         self.label_5.setText(_translate("MainWindow", "Pilih nilai L", None))
         self.box_nilaiL.setItemText(0, _translate("MainWindow", "32", None))
         self.box_nilaiL.setItemText(1, _translate("MainWindow", "64", None))
         self.btn_ok.setText(_translate("MainWindow", "OK", None))
+
 
 

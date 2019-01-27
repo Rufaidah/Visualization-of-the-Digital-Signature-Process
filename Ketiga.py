@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'Ketiga.ui'
 #
-# Created: Sun Dec  9 22:26:45 2018
+# Created: Wed Jan 16 19:25:24 2019
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -561,6 +561,14 @@ class Ui_MainWindow3(object):
         self.verticalLayout_6 = QtGui.QVBoxLayout()
         self.verticalLayout_6.setContentsMargins(-1, 15, -1, -1)
         self.verticalLayout_6.setObjectName(_fromUtf8("verticalLayout_6"))
+        self.label_15 = QtGui.QLabel(self.frame_input)
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_15.setFont(font)
+        self.label_15.setObjectName(_fromUtf8("label_15"))
+        self.verticalLayout_6.addWidget(self.label_15)
         self.label_5 = QtGui.QLabel(self.frame_input)
         font = QtGui.QFont()
         font.setPointSize(12)
@@ -633,12 +641,17 @@ class Ui_MainWindow3(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Ubuntu\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">=== Pembagi Utama (q) === </span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Salah satu input untuk membuat global public-key dan private key.</p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Salah satu komponen dari global public-key dan sebagai salah satu inputan untuk mendapatkan nilai r dan s.</p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">Komputasi:  </span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">2^159 &lt; q &lt; 2^160</span> </p></body></html>", None))
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Pembagi utama dari (p-1)</p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">2^159 &lt; q &lt; 2^160</span> </p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">*pada studi kasus diganti menjadi </p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">2 &lt; q &lt; (p-1)/100</span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">nilai pembagi utama diambil dari yang paling besar</p></body></html>", None))
         self.output.setText(_translate("MainWindow", "OUTPUT", None))
         self.label_judul.setText(_translate("MainWindow", "Mencari Pembagi Utama", None))
-        self.label_5.setText(_translate("MainWindow", "Random nilai q", None))
+        self.label_15.setText(_translate("MainWindow", "Proses:", None))
+        self.label_5.setText(_translate("MainWindow", "Mencari nilai q", None))
         self.btn_ok.setText(_translate("MainWindow", "OK", None))
 
 

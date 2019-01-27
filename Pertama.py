@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'Pertama.ui'
 #
-# Created: Sun Dec  9 22:08:59 2018
+# Created: Wed Jan 16 19:51:31 2019
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -544,6 +544,14 @@ class Ui_MainWindow(object):
         self.verticalLayout_7 = QtGui.QVBoxLayout()
         self.verticalLayout_7.setContentsMargins(-1, 15, -1, 0)
         self.verticalLayout_7.setObjectName(_fromUtf8("verticalLayout_7"))
+        self.label_15 = QtGui.QLabel(self.frame_input)
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_15.setFont(font)
+        self.label_15.setObjectName(_fromUtf8("label_15"))
+        self.verticalLayout_7.addWidget(self.label_15)
         self.label_5 = QtGui.QLabel(self.frame_input)
         font = QtGui.QFont()
         font.setPointSize(12)
@@ -585,8 +593,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.addItem(spacerItem2)
         self.btn_process = QtGui.QPushButton(self.frame_input)
         font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
+        font.setBold(False)
+        font.setWeight(50)
         self.btn_process.setFont(font)
         self.btn_process.setStyleSheet(_fromUtf8(""))
         self.btn_process.setObjectName(_fromUtf8("btn_process"))
@@ -643,11 +651,11 @@ class Ui_MainWindow(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Ubuntu\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">=== M === </span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">=== Message (M) === </span></p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Message/file yang akan di proses. </p>\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">=== Nilai Hash === </span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">=== Nilai Hash (H(M))=== </span></p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Hasil keluaran dari fungsi hash yang merepresentasikan isi dari dokumen sehingga lebih mudah untuk dikomputasi. </p>\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">=== Fungsi Hash === </span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">=== Fungsi Hash (f(H))=== </span></p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Fungsi yang menerima masukan string dengan panjang sembarang yang kemudian di transformasikan menjadi string keluaran yang panjangnya tetap.</p>\n"
 "<ol style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li style=\" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">MD5 </li>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;\">Fungsi hash satu arah yang keluarannya berupa string dengan panjang 128 bit. </p>\n"
@@ -657,14 +665,14 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;\">Algoritma yang digunakan dalam standar NIST, menghasilkan nilai hash dengan panjang 160 bit. </p></body></html>", None))
         self.output.setText(_translate("MainWindow", "OUTPUT", None))
         self.label_judul.setText(_translate("MainWindow", "Mencari Nilai Hash", None))
+        self.label_15.setText(_translate("MainWindow", "Proses:", None))
         self.label_5.setText(_translate("MainWindow", "Masukkan file", None))
         self.btn_search.setText(_translate("MainWindow", "...", None))
         self.label_6.setText(_translate("MainWindow", "Pilih fungsi hash", None))
         self.box_funsihash.setItemText(0, _translate("MainWindow", "MD5", None))
         self.box_funsihash.setItemText(1, _translate("MainWindow", "RSA", None))
         self.box_funsihash.setItemText(2, _translate("MainWindow", "SHA", None))
-        self.btn_process.setText(_translate("MainWindow", "PROCESS", None))
-
+        self.btn_process.setText(_translate("MainWindow", "OK", None))
 
 
 

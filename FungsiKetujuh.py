@@ -1,10 +1,13 @@
+import hashlib
+
 from PyQt4.QtGui import QDesktopWidget
 
-from ui import Ketujuh
+from ui import Ketujuh, FungsiKedelapan
 
 from PyQt4 import QtGui, QtCore
 from PyQt4.QtGui import QPixmap
 
+import sympy
 import random
 
 class MyQtApp(Ketujuh.Ui_MainWindow7, QtGui.QMainWindow):
@@ -20,7 +23,7 @@ class MyQtApp(Ketujuh.Ui_MainWindow7, QtGui.QMainWindow):
         # self.showMaximized()
         self.setWindowTitle("Proses Digital Signature")
         self.btn_ok.clicked.connect(self.select_nilais)
-        # self.btn_next.clicked.connect(self.next)
+        self.btn_next.clicked.connect(self.next)
 
         button = self.btn_next
         button.setIcon(QtGui.QIcon("images/next-arrow.png"))
@@ -63,7 +66,7 @@ class MyQtApp(Ketujuh.Ui_MainWindow7, QtGui.QMainWindow):
         label_nilaiprima.setText("p = " +open('output/nilaip.txt', 'r').read()[0:3]+"..")
 
         label_L = self.label_nilaiL
-        label_L.setText(open('output/nilaiL.txt', 'r').read())
+        label_L.setText("L = " + open('output/nilaiL.txt', 'r').read())
 
         label_nilaipembagi = self.label_nilaiq
         label_nilaipembagi.setText("q = " +open('output/nilaipembagiutama.txt', 'r').read()[0:3]+"..")
@@ -75,40 +78,45 @@ class MyQtApp(Ketujuh.Ui_MainWindow7, QtGui.QMainWindow):
         label_k.setText("k = " +open('output/nilaik.txt', 'r').read()[0:3]+"..")
 
         label_h = self.label_nilaih
-        label_h.setText("h = " + open('output/nilaih.txt', 'r').read())
+        label_h.setText("h = " + open('output/nilaih.txt', 'r').read()[0:3]+"..")
 
         label_g = self.label_nilaig
-        label_g.setText("g = " +open('output/nilaig.txt', 'r').read())
+        label_g.setText("g = " +open('output/nilaig.txt', 'r').read()[0:3]+"..")
 
         label_r = self.label_nilair
-        label_r.setText("r = " +open('output/nilair.txt', 'r').read())
+        label_r.setText("r = " +open('output/nilair.txt', 'r').read()[0:3]+"..")
 
     def select_nilais(self):
-        nilaihash = int(open('output/nilaihash.txt', 'r').read())
+        nilaihash = open('output/nilaihash.txt', 'r').read()
+        nilaihash = int(nilaihash, 32)
+        print(nilaihash)
+
         nilaix = int(open('output/nilaix.txt', 'r').read())
         nilaik = int(open('output/nilaik.txt', 'r').read())
         nilaiq = int(open('output/nilaipembagiutama.txt', 'r').read())
-        nilair = float(open('output/nilair.txt', 'r').read())
+        nilair = int(open('output/nilair.txt', 'r').read())
 
+        kinvrs = sympy.mod_inverse(nilaik, nilaiq)
+        print(kinvrs)
 
-        s = 0
+        s = kinvrs * (nilaihash + (nilaix * nilair)) % nilaiq
 
         output = "Nilai s = " + str(s)
         self.nilai_output.setText(output)
 
         lebel_s = self.label_nilais
-        lebel_s.setText(str(s))
+        lebel_s.setText("s = " + str(s)[0:3]+"..")
         file = open('output/nilais.txt', 'w')
         file.write(str(s))
         file.close()
 
         return s
 
-    # def next(self):
-    #     self.hide()
-    #     kelima = FungsiKeenam.MyQtApp(self)
-    #     kelima.position()
-    #     kelima.show()
+    def next(self):
+        self.hide()
+        kedelapan = FungsiKedelapan.MyQtApp(self)
+        kedelapan.position()
+        kedelapan.show()
 
 if __name__ == "__main__":
     import sys

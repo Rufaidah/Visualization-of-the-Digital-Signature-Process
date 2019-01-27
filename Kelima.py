@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'Kelima.ui'
 #
-# Created: Tue Dec 11 15:01:25 2018
+# Created: Wed Jan 16 19:47:36 2019
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -967,9 +967,35 @@ class Ui_MainWindow5(object):
         self.label_judul.setMargin(10)
         self.label_judul.setObjectName(_fromUtf8("label_judul"))
         self.verticalLayout_7.addWidget(self.label_judul)
+        self.verticalLayout_8 = QtGui.QVBoxLayout()
+        self.verticalLayout_8.setContentsMargins(0, 15, 0, -1)
+        self.verticalLayout_8.setObjectName(_fromUtf8("verticalLayout_8"))
+        self.label_13 = QtGui.QLabel(self.frame_input)
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_13.setFont(font)
+        self.label_13.setObjectName(_fromUtf8("label_13"))
+        self.verticalLayout_8.addWidget(self.label_13)
+        self.label = QtGui.QLabel(self.frame_input)
+        self.label.setObjectName(_fromUtf8("label"))
+        self.verticalLayout_8.addWidget(self.label)
+        self.label_14 = QtGui.QLabel(self.frame_input)
+        self.label_14.setObjectName(_fromUtf8("label_14"))
+        self.verticalLayout_8.addWidget(self.label_14)
+        self.verticalLayout_7.addLayout(self.verticalLayout_8)
         self.verticalLayout_6 = QtGui.QVBoxLayout()
         self.verticalLayout_6.setContentsMargins(-1, 15, -1, -1)
         self.verticalLayout_6.setObjectName(_fromUtf8("verticalLayout_6"))
+        self.label_15 = QtGui.QLabel(self.frame_input)
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_15.setFont(font)
+        self.label_15.setObjectName(_fromUtf8("label_15"))
+        self.verticalLayout_6.addWidget(self.label_15)
         self.label_5 = QtGui.QLabel(self.frame_input)
         font = QtGui.QFont()
         font.setPointSize(12)
@@ -1048,16 +1074,20 @@ class Ui_MainWindow5(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Ubuntu\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">=== g === </span></p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Salah satu input untuk membuat global public-key</p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">=== Nilai g === </span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Salah satu komponen dari global public-key dan sebagai salah satu inputan untuk mendapatkan nilai r .</p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Komputasi:<span style=\" font-weight:600;\">  </span></p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">g = h^((p-1)/q) mod p  | g &gt; 1</span></p>\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">=== h === </span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">=== Nilai h === </span></p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Input untuk mencari nilai g</p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Komputasi:<span style=\" font-weight:600;\"> </span></p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600;\">1 &lt; h &lt; (p - 1) </span></p></body></html>", None))
         self.output.setText(_translate("MainWindow", "OUTPUT", None))
         self.label_judul.setText(_translate("MainWindow", "Mencari Nilai g", None))
+        self.label_13.setText(_translate("MainWindow", "Yang Dibutuhkan:", None))
+        self.label.setText(_translate("MainWindow", "<html><head/><body><ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Nilai p</li></ul></body></html>", None))
+        self.label_14.setText(_translate("MainWindow", "<html><head/><body><ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Nilai q</li></ul></body></html>", None))
+        self.label_15.setText(_translate("MainWindow", "Proses:", None))
         self.label_5.setText(_translate("MainWindow", "Random nilai h", None))
         self.btn_ok.setText(_translate("MainWindow", "OK", None))
 

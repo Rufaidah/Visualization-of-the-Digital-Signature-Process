@@ -53,14 +53,14 @@ class MyQtApp(Keempat.Ui_MainWindow4, QtGui.QMainWindow):
         label_nilaiprima.setText("p = " +open('output/nilaip.txt', 'r').read()[0:3]+"..")
 
         label_L = self.label_nilaiL
-        label_L.setText(open('output/nilaiL.txt', 'r').read())
+        label_L.setText("L = " + open('output/nilaiL.txt', 'r').read())
 
         label_nilaipembagi = self.label_nilaiq
         label_nilaipembagi.setText("q = " +open('output/nilaipembagiutama.txt', 'r').read()[0:3]+"..")
 
     def select_nilaixk(self):
-        lower = 0
-        upper = int(open('output/nilaipembagiutama.txt', 'r').read())
+        lower = 1
+        upper = int(open('output/nilaipembagiutama.txt', 'r').read()) - 1
 
         x = random.randint(lower, upper)
         k = random.randint(lower, upper)

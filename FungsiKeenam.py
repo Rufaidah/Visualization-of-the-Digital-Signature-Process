@@ -20,7 +20,7 @@ class MyQtApp(Keenam.Ui_MainWindow6, QtGui.QMainWindow):
         # self.showMaximized()
         self.setWindowTitle("Proses Digital Signature")
         self.btn_ok.clicked.connect(self.select_nilair)
-        # self.btn_next.clicked.connect(self.next)
+        self.btn_next.clicked.connect(self.next)
 
         button = self.btn_next
         button.setIcon(QtGui.QIcon("images/next-arrow.png"))
@@ -61,7 +61,7 @@ class MyQtApp(Keenam.Ui_MainWindow6, QtGui.QMainWindow):
         label_nilaiprima.setText("p = " +open('output/nilaip.txt', 'r').read()[0:3]+"..")
 
         label_L = self.label_nilaiL
-        label_L.setText(open('output/nilaiL.txt', 'r').read())
+        label_L.setText("L = " +open('output/nilaiL.txt', 'r').read())
 
         label_nilaipembagi = self.label_nilaiq
         label_nilaipembagi.setText("q = " +open('output/nilaipembagiutama.txt', 'r').read()[0:3]+"..")
@@ -76,13 +76,13 @@ class MyQtApp(Keenam.Ui_MainWindow6, QtGui.QMainWindow):
         label_h.setText("h = " + open('output/nilaih.txt', 'r').read()[0:3]+"..")
 
         label_g = self.label_nilaig
-        label_g.setText("g = "+open('output/nilaig.txt', 'r').read())
+        label_g.setText("g = "+open('output/nilaig.txt', 'r').read()[0:3]+"..")
 
     def select_nilair(self):
         nilaik = int(open('output/nilaik.txt', 'r').read())
         nilaip = int(open('output/nilaip.txt', 'r').read())
         nilaiq = int(open('output/nilaipembagiutama.txt', 'r').read())
-        nilaig = float(open('output/nilaig.txt', 'r').read())
+        nilaig = int(open('output/nilaig.txt', 'r').read())
 
         r = ((nilaig**nilaik) % nilaip) % nilaiq
 
@@ -90,7 +90,7 @@ class MyQtApp(Keenam.Ui_MainWindow6, QtGui.QMainWindow):
         self.nilai_output.setText(output)
 
         lebel_r = self.label_nilair
-        lebel_r.setText("r = " +str(r))
+        lebel_r.setText("r = " +str(r)[0:3]+"..")
         file = open('output/nilair.txt', 'w')
         file.write(str(r))
         file.close()
