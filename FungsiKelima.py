@@ -1,3 +1,4 @@
+from PyQt4.QtCore import QThread
 from PyQt4.QtGui import QDesktopWidget
 
 from ui import Kelima, FungsiKeenam
@@ -6,6 +7,8 @@ from PyQt4 import QtGui, QtCore
 from PyQt4.QtGui import QPixmap
 
 import random
+import threading
+import time
 
 class MyQtApp(Kelima.Ui_MainWindow5, QtGui.QMainWindow):
     def position(self):
@@ -16,10 +19,13 @@ class MyQtApp(Kelima.Ui_MainWindow5, QtGui.QMainWindow):
 
     def __init__(self, parent=None):
         super(MyQtApp, self).__init__(parent)
+
         self.setup5(self)
         # self.showMaximized()
         self.setWindowTitle("Proses Digital Signature")
+
         self.btn_ok.clicked.connect(self.select_nilaig)
+
         self.btn_next.clicked.connect(self.next)
 
         button = self.btn_next
@@ -73,7 +79,9 @@ class MyQtApp(Kelima.Ui_MainWindow5, QtGui.QMainWindow):
     def select_nilaig(self):
         nilaip = int(open('output/nilaip.txt', 'r').read())
         nilaiq = int(open('output/nilaipembagiutama.txt', 'r').read())
+        self.calculate_nilaig(nilaip, nilaiq)
 
+    def calculate_nilaig(self, nilaip, nilaiq):
         lower = 2
         upper = nilaip - 2
 
@@ -85,7 +93,7 @@ class MyQtApp(Kelima.Ui_MainWindow5, QtGui.QMainWindow):
         self.nilai_output.setText(output)
 
         lebel_h = self.label_nilaih
-        lebel_h.setText("h = " + str(h)[0:3]+"..")
+        lebel_h.setText("h = " + str (h)[0:3]+"..")
         file = open('output/nilaih.txt', 'w')
         file.write(str(h))
         file.close()

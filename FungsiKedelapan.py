@@ -32,7 +32,7 @@ class MyQtApp(Kedelapan.Ui_MainWindow8, QtGui.QMainWindow):
         button.setIconSize(QtCore.QSize(35, 35))
 
     def next(self):
-        self.hide()
+        self.close()
         kesembilan = FungsiKesembilan.MyQtApp(self)
         kesembilan.position()
         kesembilan.show()

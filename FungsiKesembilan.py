@@ -1,3 +1,6 @@
+import time
+from time import sleep
+
 from PyQt4.QtGui import QDesktopWidget
 
 from ui import Kesembilan
@@ -27,7 +30,7 @@ class MyQtApp(Kesembilan.Ui_MainWindow9, QtGui.QMainWindow):
         dialog.setFilter(dialog.filter() | QtCore.QDir.Hidden)
         dialog.setDefaultSuffix('pdf')
         dialog.setNameFilters(['PDF (*.pdf)'])
-        if dialog.exec_()== QtGui.QDialog.Accepted:
+        if dialog.exec_() == QtGui.QDialog.Accepted:
             self.edit_file.setText(dialog.selectedFiles()[0])
             print("Masuk")
         else:
@@ -103,6 +106,7 @@ class MyQtApp(Kesembilan.Ui_MainWindow9, QtGui.QMainWindow):
             return
 
         h = hashlib.md5(open(file, 'rb').read()).hexdigest()
+        # print("h = " + h)
         return int(h, 32)
 
     def sha(self):
