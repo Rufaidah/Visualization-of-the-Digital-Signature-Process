@@ -1,7 +1,7 @@
 from PyQt4.QtCore import QThread
 from PyQt4.QtGui import QDesktopWidget
 
-from ui import Kelima, FungsiKeenam
+from ui import Kelima, FungsiKeenam, arrow
 
 from PyQt4 import QtGui, QtCore
 from PyQt4.QtGui import QPixmap
@@ -9,6 +9,7 @@ from PyQt4.QtGui import QPixmap
 import random
 import threading
 import time
+
 
 class MyQtApp(Kelima.Ui_MainWindow5, QtGui.QMainWindow):
     def position(self):
@@ -51,7 +52,7 @@ class MyQtApp(Kelima.Ui_MainWindow5, QtGui.QMainWindow):
         label5.setPixmap(image.scaled(25, 25))
         label6.setPixmap(image.scaled(25, 25))
         label7.setPixmap(image.scaled(25, 25))
-        label11.setPixmap(image.scaled(25, 25))
+        # label11.setPixmap(image.scaled(25, 25))
         label12.setPixmap(image.scaled(25, 25))
         label13.setPixmap(image.scaled(25, 25))
 

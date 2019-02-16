@@ -65,6 +65,12 @@ color: rgb(255, 255, 255);</string>
                 </item>
                 <item>
                  <widget class="QScrollArea" name="scrollArea">
+                  <property name="layoutDirection">
+                   <enum>Qt::LeftToRight</enum>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-image: url(:/images/images/Arrow hh.png);</string>
+                  </property>
                   <property name="widgetResizable">
                    <bool>true</bool>
                   </property>
@@ -72,7 +78,7 @@ color: rgb(255, 255, 255);</string>
                    <property name="geometry">
                     <rect>
                      <x>0</x>
-                     <y>0</y>
+                     <y>-100</y>
                      <width>479</width>
                      <height>595</height>
                     </rect>
@@ -2193,6 +2199,8 @@ color: rgb(255, 255, 255);</string>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="arrow.qrc"/>
+ </resources>
  <connections/>
 </ui>

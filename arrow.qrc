@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="images">
+    <file>images/arrow-5-72.png</file>
+    <file>images/Arrow 5 (72).png</file>
+    <file>images/Arrow hh.png</file>
+  </qresource>
+</RCC>

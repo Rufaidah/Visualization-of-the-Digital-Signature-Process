@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'Kelima.ui'
 #
-# Created: Wed Jan 16 19:47:36 2019
+# Created: Sat Feb 16 23:13:19 2019
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -62,10 +62,12 @@ class Ui_MainWindow5(object):
         self.signing.setObjectName(_fromUtf8("signing"))
         self.verticalLayout_5.addWidget(self.signing)
         self.scrollArea = QtGui.QScrollArea(self.frame_signing)
+        self.scrollArea.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.scrollArea.setStyleSheet(_fromUtf8("background-image: url(:/images/images/Arrow hh.png);"))
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName(_fromUtf8("scrollArea"))
         self.scrollAreaWidgetContents = QtGui.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 479, 595))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -100, 479, 595))
         self.scrollAreaWidgetContents.setObjectName(_fromUtf8("scrollAreaWidgetContents"))
         self.gridLayout_5 = QtGui.QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_5.setObjectName(_fromUtf8("gridLayout_5"))
@@ -1090,6 +1092,8 @@ class Ui_MainWindow5(object):
         self.label_15.setText(_translate("MainWindow", "Proses:", None))
         self.label_5.setText(_translate("MainWindow", "Random nilai h", None))
         self.btn_ok.setText(_translate("MainWindow", "OK", None))
+
+# import arrow
 
 
 
