@@ -27,7 +27,7 @@
        <item row="0" column="0">
         <widget class="QFrame" name="frame_signing">
          <property name="styleSheet">
-          <string notr="true"/>
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::WinPanel</enum>
@@ -37,7 +37,7 @@
          </property>
          <layout class="QGridLayout" name="gridLayout_2">
           <item row="0" column="0">
-           <layout class="QVBoxLayout" name="verticalLayout_5">
+           <layout class="QVBoxLayout" name="verticalLayout_3">
             <item>
              <widget class="QLabel" name="signing">
               <property name="font">
@@ -67,6 +67,9 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item>
              <layout class="QVBoxLayout" name="verticalLayout">
+              <property name="topMargin">
+               <number>10</number>
+              </property>
               <item>
                <widget class="QLabel" name="label">
                 <property name="font">
@@ -88,12 +91,15 @@ color: rgb(255, 255, 255);</string>
                 <property name="text">
                  <string/>
                 </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
                </widget>
               </item>
              </layout>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="verticalLayout_4">
+             <layout class="QVBoxLayout" name="verticalLayout_2">
               <item>
                <widget class="QLabel" name="label_2">
                 <property name="font">
@@ -114,60 +120,68 @@ Berikut adalah keseluruhan dari proses </string>
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout">
                 <item>
-                 <layout class="QVBoxLayout" name="verticalLayout_2">
-                  <item>
-                   <widget class="QLabel" name="label_3">
-                    <property name="font">
-                     <font>
-                      <pointsize>15</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                     </font>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">color: rgb(255, 166, 77);</string>
-                    </property>
-                    <property name="text">
-                     <string>Signing</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLabel" name="label_signing">
-                    <property name="text">
-                     <string/>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
+                 <widget class="QLabel" name="label_3">
+                  <property name="font">
+                   <font>
+                    <pointsize>15</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(255, 166, 77);</string>
+                  </property>
+                  <property name="text">
+                   <string>Signing</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                  </property>
+                 </widget>
                 </item>
                 <item>
-                 <layout class="QVBoxLayout" name="verticalLayout_3">
-                  <item>
-                   <widget class="QLabel" name="label_4">
-                    <property name="font">
-                     <font>
-                      <pointsize>15</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                     </font>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">color: rgb(255, 166, 77);</string>
-                    </property>
-                    <property name="text">
-                     <string>Verifying</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLabel" name="label_verifying">
-                    <property name="text">
-                     <string/>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
+                 <widget class="QLabel" name="label_4">
+                  <property name="font">
+                   <font>
+                    <pointsize>15</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(255, 166, 77);</string>
+                  </property>
+                  <property name="text">
+                   <string>Verifying</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <item>
+                 <widget class="QLabel" name="label_signing">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_verifying">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                  </property>
+                 </widget>
                 </item>
                </layout>
               </item>

@@ -15,8 +15,14 @@ import rsa
 import hashlib
 
 class MyQtApp(Pertama.Ui_MainWindow, QtGui.QMainWindow):
-    def __init__(self):
-        super(MyQtApp, self).__init__()
+    def position(self):
+        screen = QtGui.QDesktopWidget().screenGeometry()
+        x = (screen.width() - self.geometry().width()) / 2
+        y = (screen.height() - self.geometry().height()) / 2
+        self.move(x, y)
+
+    def __init__(self, parent=None):
+        super(MyQtApp, self).__init__(parent)
         self.setupUi(self)
         # self.showMaximized()
         self.setWindowTitle("Proses Digital Signature")
