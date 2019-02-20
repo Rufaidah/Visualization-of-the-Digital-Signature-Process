@@ -1,7 +1,7 @@
 from PyQt4.QtCore import QThread
 from PyQt4.QtGui import QDesktopWidget
 
-from ui import Kelima, FungsiKeenam #, arrow
+from ui import Kelima, FungsiKeenam, arrow
 
 from PyQt4 import QtGui, QtCore
 from PyQt4.QtGui import QPixmap

@@ -1093,7 +1093,6 @@ class Ui_MainWindow5(object):
         self.label_5.setText(_translate("MainWindow", "Random nilai h", None))
         self.btn_ok.setText(_translate("MainWindow", "OK", None))
 
-# import arrow
-
+import arrow
 
 
