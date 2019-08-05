@@ -1,7 +1,7 @@
 from PyQt4.QtGui import QDesktopWidget
 
-from ui import Pertama, FungsiKedua
-from ui.Kedua import *
+import Pertama, FungsiKedua
+from Kedua import *
 import ntpath
 
 from PyQt4 import QtGui,QtCore
@@ -50,7 +50,7 @@ class MyQtApp(Pertama.Ui_MainWindow, QtGui.QMainWindow):
         dialog.setFilter(dialog.filter() | QtCore.QDir.Hidden)
         dialog.setDefaultSuffix('pdf')
         dialog.setNameFilters(['PDF (*.pdf)'])
-        if dialog.exec_()== QtGui.QDialog.Accepted:
+        if dialog.exec_() == QtGui.QDialog.Accepted:
             self.edit_file.setText(dialog.selectedFiles()[0])
         else:
             print("Canceled")

@@ -1,6 +1,6 @@
 from PyQt4.QtGui import QDesktopWidget
 
-from ui import Kedelapan, FungsiKesembilan
+import Kedelapan, FungsiKesembilan
 
 from PyQt4 import QtGui, QtCore
 

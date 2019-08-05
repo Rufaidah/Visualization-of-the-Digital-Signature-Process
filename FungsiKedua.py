@@ -1,6 +1,6 @@
 from PyQt4.QtGui import QDesktopWidget
 
-from ui import Kedua, FungsiKetiga
+import Kedua, FungsiKetiga
 
 from PyQt4 import QtGui, QtCore
 from PyQt4.QtGui import QPixmap
@@ -75,9 +75,6 @@ class MyQtApp(Kedua.Ui_MainWindow2, QtGui.QMainWindow):
         
 
     def next(self):
-
-
-
         self.hide()
         ketiga = FungsiKetiga.MyQtApp(self)
         ketiga.position()

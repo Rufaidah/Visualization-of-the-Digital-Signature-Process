@@ -3,7 +3,7 @@ from time import sleep
 
 from PyQt4.QtGui import QDesktopWidget
 
-from ui import Kesembilan
+import Kesembilan
 
 from PyQt4 import QtGui, QtCore
 

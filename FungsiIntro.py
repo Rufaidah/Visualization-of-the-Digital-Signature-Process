@@ -1,6 +1,6 @@
 from PyQt4.QtGui import QDesktopWidget
 
-from ui import Intro, FungsiPertama
+import Intro, FungsiPertama
 
 from PyQt4 import QtGui,QtCore
 from PyQt4.QtGui import QPixmap
